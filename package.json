@@ -1,0 +1,20 @@
+{
+  "name": "com.drbn.physics",
+  "version": "1.0.0",
+  "displayName": "DRBN Physics Tools",
+  "description": "Physics simulation tools for Unity including Langevin thermostat, Marching Cubes mesh generation, particle systems, spring simulations, and spatial data structures.",
+  "unity": "2021.3",
+  "keywords": [
+    "physics",
+    "simulation",
+    "molecular-dynamics",
+    "langevin",
+    "marching-cubes",
+    "particles",
+    "kdtree",
+    "spatial-hash"
+  ],
+  "author": {
+    "name": "DRBN"
+  }
+}
