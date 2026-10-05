@@ -1,7 +1,13 @@
 {
     "name": "DRBN.Physics",
     "rootNamespace": "DRBN.Physics",
-    "references": [],
+    "references": [
+        "Unity.InputSystem",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.Management",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

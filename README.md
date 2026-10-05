@@ -29,7 +29,15 @@ A Unity package providing physics simulation tools for molecular dynamics, mesh 
 
 ## Requirements
 
-- Unity 2021.3+
+- Unity 6000.0+ (Unity 6)
+- XR Interaction Toolkit 3.x
+- Input System 1.20+
+- XR Plug-in Management 4.5+
+- uGUI 2.0 (TextMeshPro / UnityEngine.UI)
+
+All dependencies are declared in `package.json` and resolve automatically.
+For VR interaction, enable an XR provider (e.g. OpenXR) in
+Project Settings > XR Plug-in Management.
 
 ## License
 

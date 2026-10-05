@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 //using System.Collections;
 using System;
 using System.Linq;
@@ -70,8 +71,7 @@ public class Langevin : MonoBehaviour {
     UnityEngine.Rigidbody[] CountObjects()
     {
         //print("checking... ");
-        GOS = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
-        //Rigidbody[] GOS = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
+        GOS = FindObjectsByType<Rigidbody>(FindObjectsSortMode.None);
         /*
         foreach (Rigidbody GO in GOS)
         {
@@ -196,7 +196,7 @@ public class Langevin : MonoBehaviour {
             CountObjects();
         //}
         
-        if (Input.GetKeyDown("o"))
+        if (Keyboard.current != null && Keyboard.current.oKey.wasPressedThisFrame)
         {
             bool isK = GOS.Any(p => p.isKinematic == true);
             Debug.Log(isK + " popo touche O");
@@ -210,7 +210,7 @@ public class Langevin : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown("p"))
+        if (Keyboard.current != null && Keyboard.current.pKey.wasPressedThisFrame)
         {
             //freeze using kinematic
             bool isK = GOS.Any(p => p.isKinematic == true);
@@ -238,7 +238,7 @@ public class Langevin : MonoBehaviour {
             */
         }
 
-        if (Input.GetKeyDown("i"))
+        if (Keyboard.current != null && Keyboard.current.iKey.wasPressedThisFrame)
         {
             if (Time.timeScale == 1.0f)
             {
@@ -254,7 +254,7 @@ public class Langevin : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown("[+]"))
+        if (Keyboard.current != null && Keyboard.current.numpadPlusKey.wasPressedThisFrame)
         {
             if (temp >= 0.0f && temp < 10000)
             {
@@ -265,7 +265,7 @@ public class Langevin : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown("[-]"))
+        if (Keyboard.current != null && Keyboard.current.numpadMinusKey.wasPressedThisFrame)
         {
             if (temp > 0.0f && temp <= 10000)
             {

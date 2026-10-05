@@ -1,9 +1,9 @@
 {
   "name": "com.drbn.physics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "DRBN Physics Tools",
-  "description": "Physics simulation tools for Unity including Langevin thermostat, Marching Cubes mesh generation, particle systems, spring simulations, and spatial data structures.",
-  "unity": "2021.3",
+  "description": "Physics simulation tools for Unity including Langevin thermostat, Marching Cubes mesh generation, particle systems, spring simulations, and spatial data structures. Includes VR interaction via XR Interaction Toolkit.",
+  "unity": "6000.0",
   "keywords": [
     "physics",
     "simulation",
@@ -12,8 +12,16 @@
     "marching-cubes",
     "particles",
     "kdtree",
-    "spatial-hash"
+    "spatial-hash",
+    "vr",
+    "xr"
   ],
+  "dependencies": {
+    "com.unity.inputsystem": "1.20.0",
+    "com.unity.xr.interaction.toolkit": "3.6.0",
+    "com.unity.xr.management": "4.5.4",
+    "com.unity.ugui": "2.0.0"
+  },
   "author": {
     "name": "DRBN"
   }
